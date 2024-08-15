@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vite + TS</title>
+</head>
+
+<body>
+
+  <header>
+    <ul id="cart-list">
+      <template class="cart-template">
+        <li class="grid grid-cols-3">
+          <p class="truncate">Titulo del Carrito</p>
+          <div>
+            <button class="bg-blue-500 text-white px-2 py-1 rounded-md">+</button>
+            <span class="inline-block text-center w-5">0</span>
+            <button class="bg-red-500 text-white px-2 py-1 rounded-md">-</button>
+          </div>
+          <p class="text-right">Precio</p>
+        </li>
+      </template>
+    </ul>
+    <p class="text-right" id="cart-total">Total del carrito</p>
+  </header>
+
+  <h1 class="text-center my-3 text-3xl">Products</h1>
+  <main
+    class="w-[98%] grid grid-cols-4 mx-auto max-lg:grid-cols-3 max-mediun:grid-cols-2 max-sm:grid-cols-1 max-sm:min-w-min"
+    id="product-list">
+    <template id="product-template">
+      <article class="border-2 border-violet-900 rounded-xl m-1 p-2 flex flex-col max-sm:w-[90%]">
+        <img src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg" alt="image"
+          class="max-w-full max-h-full mx-auto max-mediun:max-w-full max-mediun:max-h-full max-sm:max-w-full max-sm:max-h-full">
+        <div class="p-3">
+          <h2 class="truncate">Product Title</h2>
+          <p class="mx-auto my-1">Price <span>$100</span></p>
+          <button class="bg-indigo-500 text-white rounded-md cursor-pointer w-28">Add to cart</button>
+        </div>
+      </article>
+    </template>
+  </main>
+  <script type="module" src="/src/main.ts"></script>
+</body>
+
+</html>
